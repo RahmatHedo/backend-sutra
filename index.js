@@ -36,10 +36,8 @@ app.get('/', async (req, res) => {
     }
 });
 
-if (process.env.NODE_ENV !== 'production') {
-    app.listen(PORT, () => {
-        console.log(`Server berjalan di http://localhost:${PORT}`);
-    });
-}
+    app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server berjalan di port ${PORT}`);
+});
 
 module.exports = app;
